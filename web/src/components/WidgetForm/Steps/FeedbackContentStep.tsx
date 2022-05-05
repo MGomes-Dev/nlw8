@@ -7,6 +7,7 @@ import { ScreenshotButton } from "../ScreenshotButton";
 interface FeedbackContentStepProps {
     feedbackType: FeedbackType;
     onFeedbackRestarRequested: () => void;
+    onFeedbackSent: () => void;
 }
 
 export function FeedbackContentStep(props: FeedbackContentStepProps) {
@@ -17,10 +18,13 @@ export function FeedbackContentStep(props: FeedbackContentStepProps) {
 
     function handleSubmitFeedback(event: FormEvent) {
         event.preventDefault();
+
         console.log({
             screenshot,
             comment
-        })
+        });
+
+        props.onFeedbackSent();
     };
 
     return (
@@ -57,7 +61,8 @@ export function FeedbackContentStep(props: FeedbackContentStepProps) {
 
                     <button
                         type="submit"
-                        className="p-2 bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-brand-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors"
+                        disabled={!comment.length}
+                        className="p-2 bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-brand-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors disabled:opacity-50 disabled:hover:bg-brand-500"
                     >
                         Enviar feedback
                     </button>
