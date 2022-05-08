@@ -4,6 +4,8 @@ import { Widget } from './src/componentes/Widget';
 import { theme } from './src/theme';
 import AppLoading from 'expo-app-loading';
 import { useFonts, Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
+import 'react-native-gesture-handler';
+
 
 export default function App() {
   const [fontsLoaded] = useFonts({
