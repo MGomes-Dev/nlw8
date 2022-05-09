@@ -7,6 +7,9 @@ import BottomSheet from '@gorhom/bottom-sheet';
 import { styles } from './styles';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 import { Options } from '../Options';
+import { feedbackTypes } from '../../utils/feedbackTypes';
+
+export type FeedbackType = keyof typeof feedbackTypes;
 
 function Widget() {
 
@@ -31,7 +34,7 @@ function Widget() {
 
             <BottomSheet
                 ref={bottomSheetRef}
-                snapPoints={[1,280]}
+                snapPoints={[1, 280]}
                 backgroundStyle={styles.modal}
                 handleIndicatorStyle={styles.indicator}
             >

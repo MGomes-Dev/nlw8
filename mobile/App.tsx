@@ -8,26 +8,26 @@ import 'react-native-gesture-handler';
 
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium
-  });
+    const [fontsLoaded] = useFonts({
+        Inter_400Regular,
+        Inter_500Medium
+    });
 
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  };
+    if (!fontsLoaded) {
+        return <AppLoading />;
+    };
 
-  return (
-    <View style={{
-      flex: 1,
-      backgroundColor: theme.colors.background
-    }}>
-      <StatusBar
-        style="light"
-        backgroundColor="transparent"
-        translucent
-      />
-      <Widget />
-    </View>
-  );
+    return (
+        <View style={{
+            flex: 1,
+            backgroundColor: theme.colors.background
+        }}>
+            <StatusBar
+                style="light"
+                backgroundColor="transparent"
+                translucent
+            />
+            <Widget />
+        </View>
+    );
 };
