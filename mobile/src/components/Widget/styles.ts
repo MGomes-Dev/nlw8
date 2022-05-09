@@ -1,4 +1,4 @@
-import { theme } from './../../theme/index';
+import { theme } from '../../theme/index';
 import { StyleSheet } from 'react-native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 
