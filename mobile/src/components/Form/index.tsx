@@ -45,7 +45,7 @@ export function Form({ feedbackType }: Props) {
                 placeholderTextColor={theme.colors.text_secondary}
             />
 
-            <View styles={styles.footer}>
+            <View style={styles.footer}>
                 <ScreenshotButton
                     onTakeShot={() => { }}
                     onRemoveShot={() => { }}
